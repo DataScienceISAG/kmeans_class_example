@@ -1,0 +1,11 @@
+-- Código para criar uma ssh key
+ssh-keygen -t rsa -b 4096 -C "your_email_here"
+
+-- Ligação
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+
+-- Copiar o pub para o github
+clip < ~/.ssh/id_rsa.pubssh-keygen -t rsa -b 4096 -C "your_email_here"
+
+
